@@ -11,23 +11,23 @@ spec:
     metadata:
       labels:
         app: kbt
-  spec:
-    containers:
-      - name: kbt-app
-        image: kbt-app:latest
-        imagePullPolicy: Never
-        ports:
-          - containerPort: 8089
-        env:
-          - name: SPRING_DATASOURCE_URL
-            value: "jdbc:mysql://mysql:3306/kbt"
-          - name: SPRING_DATASOURCE_USERNAME
-            value: root
-          - name: SPRING_DATASOURCE_PASSWORD
-            valueFrom:
-              configMapKeyRef:
-                name: mysql-config
-                key: MYSQL_ROOT_PASSWORD
+    spec:
+      containers:
+        - name: kbt-app
+          image: kbtflight-app:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8089
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:mysql://mysql:3306/flightapp"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: root
+            - name: SPRING_DATASOURCE_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: mysql-config
+                  key: MYSQL_ROOT_PASSWORD
 ---
 apiVersion: v1
 kind: Service

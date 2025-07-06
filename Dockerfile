@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copiar el archivo JAR generado por Spring Boot
-COPY target/kbt-0.0.1-SNAPSHOT.jar app.jar
+COPY target/kbtFlightApp-0.0.1-SNAPSHOT.jar app.jar
 
 # Exponer el puerto de la aplicación
 EXPOSE 8089
