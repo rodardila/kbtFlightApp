@@ -45,7 +45,10 @@ public class Flight implements Serializable {
 
     @Column(name="planvuelo", nullable=false, length=80)
     private @NonNull long planvuelo;
+
     private Boolean cumplido;
+
+
     public Long getIdFlight() {
         return idFlight;
     }
