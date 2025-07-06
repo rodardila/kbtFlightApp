@@ -8,6 +8,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
 import java.util.Objects;
+
 @Data
 @RequiredArgsConstructor
 @NoArgsConstructor
